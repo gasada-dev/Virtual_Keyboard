@@ -350,20 +350,80 @@ template {
 
 body {
   background-color: #ebebeb;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
   color: #0b3506;
+  padding: 1rem;
 }
 
-body .text__orange {
+body .text--orange {
   color: #ffab10;
 }
 
 body .use-keyboard-input {
-  border: none;
   position: absolute;
-  top: 130px;
-  right: 90px;
-  width: 300px;
+  border: none;
+  top: 7rem;
+  right: 5rem;
+  width: 20rem;
+  height: 5rem;
+}
+
+body .keyboard {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  background: #469e5c;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: bottom 0.4s;
+  transition: bottom 0.4s;
+}
+
+body .keyboard .keyboard__keys {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+body .keyboard .keyboard__keys .keyboard__key {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.8rem;
+  width: 5%;
+  max-width: 5rem;
+  margin: 0.15rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: #a7a7a7;
+  color: #ffffff;
+  outline: none;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+body .keyboard .keyboard__keys .keyboard__key:hover {
+  background: rgba(167, 167, 167, 0.9);
+}
+
+body .keyboard .keyboard__keys .keyboard__key:active {
+  background: rgba(148, 148, 148, 0.85);
+}
+
+body .keyboard--hidden {
+  bottom: -100%;
 }
 /*# sourceMappingURL=style.css.map */

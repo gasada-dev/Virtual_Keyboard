@@ -8,28 +8,31 @@
   <title>Virtual Keyboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <main class="main">
-    <h1>Virtual Keyboard w/ HTML, CSS & JS</h1>
-    <h3>Features</h3>
-    <ul>
-      <li>Easy to integrate</li>
-      <li>Responsive</li>
-      <li>Vanilla JS <span class="text__orange">no libraries required!</span></li>
-    </ul>
-    <textarea class="use-keyboard-input"></textarea>
+  <h1>Virtual Keyboard </h1>
+  <h3>Features</h3>
+  <ul>
+    <li>Easy to integrate</li>
+    <li>Responsive</li>
+    <li>Vanilla JS <span class="text--orange">no libraries required!</span></li>
+  </ul>
+  <textarea class="use-keyboard-input"></textarea>
 
-    <div class="keyboard">
-      <div class="keyboard__keys">
+  <div class="keyboard">
+    <div class="keyboard__keys">
+      <button type="button" class="keyboard__key">a</button>
+      <button type="button" class="keyboard__key">
+        <span class="material-icons">backspace</span>
+      </button>
 
-      </div>
     </div>
-  </main>
+  </div>
   <script src="./src/js/index.js"></script>
 </body>
 
