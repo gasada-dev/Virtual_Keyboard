@@ -347,4 +347,23 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  background-color: #ebebeb;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #0b3506;
+}
+
+body .text__orange {
+  color: #ffab10;
+}
+
+body .use-keyboard-input {
+  border: none;
+  position: absolute;
+  top: 130px;
+  right: 90px;
+  width: 300px;
+}
 /*# sourceMappingURL=style.css.map */
