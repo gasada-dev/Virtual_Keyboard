@@ -44,9 +44,9 @@ body {
         align-items: center;
         justify-content: center;
         height: 2.8rem;
-        width: 5%;
-        max-width: 5rem;
-        margin: 0.15rem;
+        width: 6%;
+        max-width: 4rem;
+        margin: 0.1rem;
         border-radius: 0.75rem;
         border: none;
         background: rgb(167, 167, 167);
@@ -55,12 +55,36 @@ body {
         vertical-align: top;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
           background: rgba(167, 167, 167, 0.9);
-        } 
-        &:active{
+        }
+        &:active {
           background: rgba(148, 148, 148, 0.85);
         }
+      }
+      .keyboard__key--wide {
+        width: 12%;
+      }
+
+      .keyboard__key--extra-wide {
+        width: 36%;
+        max-width: 18rem;
+      }
+      .keyboard__key--activatable::after {
+        content: '';
+        top: 0.6rem;
+        right: 0.6rem;
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+      }
+      .keyboard__key--active::after {
+        background: rgb(118, 236, 0);
+      }
+      .keyboard__key--dark{
+        background: rgba(0, 0, 0, 0.4);
       }
     }
   }

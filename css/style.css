@@ -403,9 +403,9 @@ body .keyboard .keyboard__keys .keyboard__key {
       -ms-flex-pack: center;
           justify-content: center;
   height: 2.8rem;
-  width: 5%;
-  max-width: 5rem;
-  margin: 0.15rem;
+  width: 6%;
+  max-width: 4rem;
+  margin: 0.1rem;
   border-radius: 0.75rem;
   border: none;
   background: #a7a7a7;
@@ -421,6 +421,34 @@ body .keyboard .keyboard__keys .keyboard__key:hover {
 
 body .keyboard .keyboard__keys .keyboard__key:active {
   background: rgba(148, 148, 148, 0.85);
+}
+
+body .keyboard .keyboard__keys .keyboard__key--wide {
+  width: 12%;
+}
+
+body .keyboard .keyboard__keys .keyboard__key--extra-wide {
+  width: 36%;
+  max-width: 18rem;
+}
+
+body .keyboard .keyboard__keys .keyboard__key--activatable::after {
+  content: '';
+  top: 0.6rem;
+  right: 0.6rem;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+body .keyboard .keyboard__keys .keyboard__key--active::after {
+  background: #76ec00;
+}
+
+body .keyboard .keyboard__keys .keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 body .keyboard--hidden {
