@@ -71,7 +71,7 @@ body {
         max-width: 18rem;
       }
       .keyboard__key--activatable::after {
-        content: '';
+        content: "";
         top: 0.6rem;
         right: 0.6rem;
         position: absolute;
@@ -83,7 +83,7 @@ body {
       .keyboard__key--active::after {
         background: rgb(118, 236, 0);
       }
-      .keyboard__key--dark{
+      .keyboard__key--dark {
         background: rgba(0, 0, 0, 0.4);
       }
     }
