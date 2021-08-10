@@ -23,7 +23,7 @@ const Keyboard = {
     this.elements.keysContainer.classList.add('keyboard__keys');
     this.elements.keysContainer.appendChild(this._createKeys());
 
-    this.elements.keys = this.elements.keysContainer.querySelectorAll(".keyboard__key");
+    this.elements.keys = this.elements.keysContainer.querySelectorAll('.keyboard__key');
 
     this.elements.main.appendChild(this.elements.keysContainer);
     document.body.appendChild(this.elements.main);
@@ -136,28 +136,36 @@ const Keyboard = {
   },
 
   _triggerEvent(handlerName) {
+    if (typeof this.eventHandlers[handlerName] == 'function') {
+        this.eventHandlers[handlerName](this.properties.value);
+    }
+},
 
-  },
+_toggleCapsLock() {
+    this.properties.capsLock = !this.properties.capsLock;
 
-  _toggleCapsLock() {
-
-  },
+    for (const key of this.elements.keys) {
+        if (key.childElementCount === 0) {
+            key.textContent = this.properties.capsLock ? key.textContent.toUpperCase() : key.textContent.toLowerCase();
+        }
+    }
+},
 
   open(initialValue, oninput, onclose) {
-    this.properties.value = initialValue || "";
+    this.properties.value = initialValue ||'';
     this.eventHandlers.oninput = oninput;
     this.eventHandlers.onclose = onclose;
-    this.elements.main.classList.remove("keyboard--hidden");
+    this.elements.main.classList.remove('keyboard--hidden');
   },
 
   close() {
-    this.properties.value = "";
+    this.properties.value = '';
     this.eventHandlers.oninput = oninput;
     this.eventHandlers.onclose = onclose;
-    this.elements.main.classList.add("keyboard--hidden");
+    this.elements.main.classList.add('keyboard--hidden');
   }
 };
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function () {
   Keyboard.init();
 });
